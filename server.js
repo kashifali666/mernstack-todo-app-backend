@@ -12,10 +12,7 @@ const PORT = process.env.port || 5000;
 
 app.use(express.json());
 
-app.use(cors({
-  origin: "https://mernstack-todo-app-frontend.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-}));
+app.use(cors());
 
 mongoose
   .connect(process.env.MONGODB_URL)
